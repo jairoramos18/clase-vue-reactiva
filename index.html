@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vite App</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
+<!-- 
+<template>
+  <div class="container">
+  <h1>Lista de Personas</h1>
+  <label for="nombre">Nombre:</label>
+  <input v-model="nombre" type="text" id="nombre" />
+
+  <label for="edad">Edad:</label>
+  <input v-model="edad" type="number" id="edad" />
+
+  <label for="genero">Género:</label>
+  <input v-model="genero" type="text" id="genero" />
+
+  <button @click="agregarPersona">Agregar Persona</button>
+
+  <div class="list-container">
+    <div>
+      <h2 class="list-title">Hombres</h2>
+      <ul class="male-list">
+        <li v-for="hombre in hombres" :key="hombre.nombre">
+          {{ hombre.nombre }} - {{ hombre.edad }} años
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="list-title">Mujeres</h2>
+      <ul class="female-list">
+        <li v-for="mujer in mujeres" :key="mujer.nombre">
+          {{ mujer.nombre }} - {{ mujer.edad }} años
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+</template>
+ -->
+ <!-- <template>
+  <div class="multiplication-table">
+    <h2>Tabla de Multiplicar</h2>
+    
+    <label for="numberInput">Ingrese un número:</label>
+    <input v-model="inputNumber" type="number" id="numberInput" min="1" max="100" />
+    
+    <button @click="calculateTable">Calcular</button>
+
+    <div v-if="errorMessage" class="error-message">{{ errorMessage }}</div>
+
+    <table v-if="!errorMessage" class="multiplication-table">
+      <thead>
+        <tr>
+          <th>Operación</th>
+          <th>Resultado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="factor in factors" :key="factor">
+          <td>{{ `${inputNumber} x ${factor}` }}</td>
+          <td>{{ inputNumber * factor }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</template>
+
+<script setup>
+import { ref } from 'vue';
+
+const inputNumber = ref(1);
+const factors = Array.from({ length: 10 }, (_, i) => i + 1);
+let errorMessage = '';
+
+function calculateTable() {
+  const number = Number(inputNumber.value);
+
+  if (number === 0) {
+    errorMessage = 'Operación no permitida: El número no puede ser cero.';
+  } else if (number < 0) {
+    errorMessage = 'Convirtiendo número negativo a positivo.';
+    inputNumber.value = Math.abs(number);
+  } else if (number > 100) {
+    errorMessage = 'Valor muy alto: El número no debe superar 100.';
+  } else {
+    errorMessage = '';
+  }
+}
+</script>
+
+<style scoped>
+.multiplication-table {
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
+</style>
+ -->
